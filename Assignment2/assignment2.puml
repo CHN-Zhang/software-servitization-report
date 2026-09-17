@@ -1,0 +1,74 @@
+@startuml
+title 作业 2：三种视角下的汽车类设计
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam roundCorner 8
+
+class "Car\n（厂家视角）" as ManufacturerCar {
+  - vin: String
+  - brand: String
+  - model: String
+  - productionDate: LocalDate
+  - engineNumber: String
+  - color: String
+  - qualityStatus: QualityStatus
+  - factoryPrice: BigDecimal
+  --
+  + assemble(): void
+  + configure(color: String): void
+  + inspectQuality(): boolean
+  + calculateProductionCost(): BigDecimal
+  + ship(dealerId: String): void
+}
+
+class "Car\n（车主视角）" as OwnerCar {
+  - vin: String
+  - plateNumber: String
+  - brand: String
+  - model: String
+  - purchaseDate: LocalDate
+  - mileage: double
+  - fuelLevel: double
+  - insuranceExpiryDate: LocalDate
+  --
+  + start(): void
+  + stop(): void
+  + accelerate(targetSpeed: double): void
+  + brake(): void
+  + refuel(amount: double): void
+  + scheduleMaintenance(date: LocalDate): void
+  + calculateRemainingRange(): double
+}
+
+class "Car\n（交通管理机构视角）" as TrafficAuthorityCar {
+  - vin: String
+  - plateNumber: String
+  - ownerId: String
+  - vehicleType: VehicleType
+  - registrationDate: LocalDate
+  - inspectionExpiryDate: LocalDate
+  - insuranceStatus: InsuranceStatus
+  - violationPoints: int
+  - status: RegistrationStatus
+  --
+  + register(): void
+  + transferOwnership(newOwnerId: String): void
+  + recordInspection(result: boolean): void
+  + recordViolation(points: int): void
+  + queryViolations(): List<Violation>
+  + cancelRegistration(): void
+}
+
+note bottom of ManufacturerCar
+  关注：生产、配置、质检、成本和出厂
+end note
+
+note bottom of OwnerCar
+  关注：驾驶、能源、里程、保险和保养
+end note
+
+note bottom of TrafficAuthorityCar
+  关注：登记、过户、年检、违法和注销
+end note
+@enduml
