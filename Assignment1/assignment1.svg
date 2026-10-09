@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="920" viewBox="0 0 1900 920" role="img" aria-labelledby="title desc">
+  <title id="title">作业 1：图书馆借书、还书场景类设计</title>
+  <desc id="desc">大学生、书籍和图书馆管理员的 UML 类图及关系。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#17304f" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#2166a5"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#6b4a9f"/>
+    </marker>
+    <style>
+      .title { font: 700 32px "Microsoft YaHei", "Segoe UI", sans-serif; fill: #183153; }
+      .subtitle { font: 16px "Microsoft YaHei", "Segoe UI", sans-serif; fill: #52657b; }
+      .class-name { font: 700 23px "Microsoft YaHei", "Segoe UI", sans-serif; fill: white; }
+      .stereotype { font: 14px "Microsoft YaHei", "Segoe UI", sans-serif; fill: #f2f7ff; }
+      .member { font: 15px Consolas, "Microsoft YaHei", monospace; fill: #172b3a; }
+      .label { font: 700 13px "Microsoft YaHei", "Segoe UI", sans-serif; fill: #3e5d78; letter-spacing: 1px; }
+      .relation { font: 13px "Microsoft YaHei", "Segoe UI", sans-serif; fill: #40566b; }
+      .note { font: 15px "Microsoft YaHei", "Segoe UI", sans-serif; fill: #40566b; }
+      .card { fill: white; stroke: #6c849d; stroke-width: 1.5; filter: url(#shadow); }
+      .divider { stroke: #b8c6d3; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1900" height="920" fill="#f4f7fb"/>
+  <text x="950" y="55" text-anchor="middle" class="title">作业 1：图书馆借书、还书场景类设计</text>
+  <text x="950" y="84" text-anchor="middle" class="subtitle">从读者、馆藏与管理三个职责设计类的属性、行为及关联</text>
+
+  <!-- 大学生 -->
+  <g transform="translate(50 120)">
+    <rect class="card" width="560" height="650" rx="10"/>
+    <path d="M10 0 H550 A10 10 0 0 1 560 10 V88 H0 V10 A10 10 0 0 1 10 0" fill="#2166a5"/>
+    <text x="280" y="30" text-anchor="middle" class="stereotype">«大学生»</text>
+    <text x="280" y="64" text-anchor="middle" class="class-name">Student</text>
+    <text x="22" y="116" class="label">ATTRIBUTES</text>
+    <text class="member" x="22" y="147">
+      <tspan x="22" dy="0">- studentId: String</tspan>
+      <tspan x="22" dy="28">- name: String</tspan>
+      <tspan x="22" dy="28">- department: String</tspan>
+      <tspan x="22" dy="28">- grade: int</tspan>
+      <tspan x="22" dy="28">- borrowingLimit: int</tspan>
+      <tspan x="22" dy="28">- currentLoans: List&lt;Loan&gt;</tspan>
+      <tspan x="22" dy="28">- outstandingFine: BigDecimal</tspan>
+      <tspan x="22" dy="28">- accountStatus: AccountStatus</tspan>
+    </text>
+    <line x1="0" y1="382" x2="560" y2="382" class="divider"/>
+    <text x="22" y="411" class="label">OPERATIONS</text>
+    <text class="member" x="22" y="442">
+      <tspan x="22" dy="0">+ searchBook(keyword: String): List&lt;Book&gt;</tspan>
+      <tspan x="22" dy="28">+ borrow(book: Book): boolean</tspan>
+      <tspan x="22" dy="28">+ returnBook(book: Book): void</tspan>
+      <tspan x="22" dy="28">+ renew(loan: Loan): boolean</tspan>
+      <tspan x="22" dy="28">+ reserve(book: Book): boolean</tspan>
+      <tspan x="22" dy="28">+ payFine(amount: BigDecimal): void</tspan>
+      <tspan x="22" dy="28">+ getCurrentLoans(): List&lt;Loan&gt;</tspan>
+    </text>
+  </g>
+
+  <!-- 书籍 -->
+  <g transform="translate(670 120)">
+    <rect class="card" width="560" height="650" rx="10"/>
+    <path d="M10 0 H550 A10 10 0 0 1 560 10 V88 H0 V10 A10 10 0 0 1 10 0" fill="#b45f24"/>
+    <text x="280" y="30" text-anchor="middle" class="stereotype">«馆藏资源»</text>
+    <text x="280" y="64" text-anchor="middle" class="class-name">Book</text>
+    <text x="22" y="116" class="label">ATTRIBUTES</text>
+    <text class="member" x="22" y="147">
+      <tspan x="22" dy="0">- isbn: String</tspan>
+      <tspan x="22" dy="28">- title: String</tspan>
+      <tspan x="22" dy="28">- authors: List&lt;String&gt;</tspan>
+      <tspan x="22" dy="28">- publisher: String</tspan>
+      <tspan x="22" dy="28">- publicationYear: int</tspan>
+      <tspan x="22" dy="28">- category: String</tspan>
+      <tspan x="22" dy="28">- totalCopies: int</tspan>
+      <tspan x="22" dy="28">- availableCopies: int</tspan>
+      <tspan x="22" dy="28">- shelfLocation: String</tspan>
+      <tspan x="22" dy="28">- status: BookStatus</tspan>
+    </text>
+    <line x1="0" y1="438" x2="560" y2="438" class="divider"/>
+    <text x="22" y="467" class="label">OPERATIONS</text>
+    <text class="member" x="22" y="498">
+      <tspan x="22" dy="0">+ isAvailable(): boolean</tspan>
+      <tspan x="22" dy="28">+ checkout(): boolean</tspan>
+      <tspan x="22" dy="28">+ checkIn(): void</tspan>
+      <tspan x="22" dy="28">+ reserve(studentId: String): boolean</tspan>
+      <tspan x="22" dy="28">+ cancelReservation(studentId: String): void</tspan>
+      <tspan x="22" dy="28">+ updateLocation(location: String): void</tspan>
+    </text>
+  </g>
+
+  <!-- 图书馆管理员 -->
+  <g transform="translate(1290 120)">
+    <rect class="card" width="560" height="650" rx="10"/>
+    <path d="M10 0 H550 A10 10 0 0 1 560 10 V88 H0 V10 A10 10 0 0 1 10 0" fill="#6b4a9f"/>
+    <text x="280" y="30" text-anchor="middle" class="stereotype">«图书馆管理员»</text>
+    <text x="280" y="64" text-anchor="middle" class="class-name">Librarian</text>
+    <text x="22" y="116" class="label">ATTRIBUTES</text>
+    <text class="member" x="22" y="147">
+      <tspan x="22" dy="0">- employeeId: String</tspan>
+      <tspan x="22" dy="28">- name: String</tspan>
+      <tspan x="22" dy="28">- branch: String</tspan>
+      <tspan x="22" dy="28">- contactNumber: String</tspan>
+      <tspan x="22" dy="28">- role: LibrarianRole</tspan>
+      <tspan x="22" dy="28">- accountStatus: AccountStatus</tspan>
+    </text>
+    <line x1="0" y1="326" x2="560" y2="326" class="divider"/>
+    <text x="22" y="355" class="label">OPERATIONS</text>
+    <text class="member" x="22" y="386">
+      <tspan x="22" dy="0">+ registerStudent(student: Student): void</tspan>
+      <tspan x="22" dy="28">+ addBook(book: Book): void</tspan>
+      <tspan x="22" dy="28">+ removeBook(isbn: String): boolean</tspan>
+      <tspan x="22" dy="28">+ lendBook(student: Student, book: Book): boolean</tspan>
+      <tspan x="22" dy="28">+ acceptReturn(student: Student, book: Book): void</tspan>
+      <tspan x="22" dy="28">+ collectFine(student: Student, amount: BigDecimal): void</tspan>
+      <tspan x="22" dy="28">+ generateOverdueReport(): List&lt;Loan&gt;</tspan>
+    </text>
+  </g>
+
+  <!-- 关联线 -->
+  <line x1="610" y1="270" x2="666" y2="270" stroke="#2166a5" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="638" y="254" text-anchor="middle" class="relation">借阅</text>
+  <line x1="1290" y1="330" x2="1234" y2="330" stroke="#6b4a9f" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  <text x="1262" y="314" text-anchor="middle" class="relation">编目</text>
+  <path d="M1570 770 V812 H330 V774" fill="none" stroke="#6b4a9f" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow-purple)"/>
+  <rect x="862" y="797" width="176" height="30" rx="15" fill="#f4f7fb" stroke="#bdafd3"/>
+  <text x="950" y="817" text-anchor="middle" class="relation">管理读者账户</text>
+
+  <text x="950" y="875" text-anchor="middle" class="note">说明：“-”表示私有成员，“+”表示公有方法；学生借阅书籍，管理员维护读者账户和馆藏。</text>
+</svg>

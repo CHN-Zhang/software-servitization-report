@@ -1,0 +1,67 @@
+@startuml
+title 作业 1：图书馆借书、还书场景类设计
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam roundCorner 8
+
+class "Student\n（大学生）" as Student {
+  - studentId: String
+  - name: String
+  - department: String
+  - grade: int
+  - borrowingLimit: int
+  - currentLoans: List<Loan>
+  - outstandingFine: BigDecimal
+  - accountStatus: AccountStatus
+  --
+  + searchBook(keyword: String): List<Book>
+  + borrow(book: Book): boolean
+  + returnBook(book: Book): void
+  + renew(loan: Loan): boolean
+  + reserve(book: Book): boolean
+  + payFine(amount: BigDecimal): void
+  + getCurrentLoans(): List<Loan>
+}
+
+class "Book\n（书籍）" as Book {
+  - isbn: String
+  - title: String
+  - authors: List<String>
+  - publisher: String
+  - publicationYear: int
+  - category: String
+  - totalCopies: int
+  - availableCopies: int
+  - shelfLocation: String
+  - status: BookStatus
+  --
+  + isAvailable(): boolean
+  + checkout(): boolean
+  + checkIn(): void
+  + reserve(studentId: String): boolean
+  + cancelReservation(studentId: String): void
+  + updateLocation(location: String): void
+}
+
+class "Librarian\n（图书馆管理员）" as Librarian {
+  - employeeId: String
+  - name: String
+  - branch: String
+  - contactNumber: String
+  - role: LibrarianRole
+  - accountStatus: AccountStatus
+  --
+  + registerStudent(student: Student): void
+  + addBook(book: Book): void
+  + removeBook(isbn: String): boolean
+  + lendBook(student: Student, book: Book): boolean
+  + acceptReturn(student: Student, book: Book): void
+  + collectFine(student: Student, amount: BigDecimal): void
+  + generateOverdueReport(): List<Loan>
+}
+
+Student "0..*" --> "0..*" Book : 借阅 / 预约
+Librarian "1" --> "0..*" Student : 管理读者账户
+Librarian "1" --> "0..*" Book : 编目 / 办理借还
+@enduml
