@@ -1,0 +1,18 @@
+{
+  "case_id": "exact_03",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:23.179Z",
+  "prompt_sha256": "c42d0181c3c2c24e4226e9b81eacf9e781e65edc83cb7ec31fc49e314a51cb42",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-915d1551-f554-99e7-949a-2efa83f5e3a9",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\"a\", \"b\"],\n            \"result\": \"项目在周一发布\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged items 'a' and 'b' as they contain identical content: '项目在周一发布'\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 407,
+    "completion_tokens": 103
+  },
+  "elapsed_ms": 1074
+}

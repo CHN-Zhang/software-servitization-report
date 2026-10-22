@@ -1,0 +1,18 @@
+{
+  "case_id": "scope_04",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:12.024Z",
+  "prompt_sha256": "6aca69c320210cf74d0fba1dd085064a76c0a91d97f0c5e79f16b116d3e240b8",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-671c1ee2-68bc-9895-bad9-6dbef8c2f855",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"b\",\n                \"a\"\n            ],\n            \"result\": \"如果报销获批；用户购买机票\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'a' (用户购买机票) is a subset of item 'b' (如果报销获批；用户购买机票). Merged into 'b' to preserve the conditional context.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 440,
+    "completion_tokens": 132
+  },
+  "elapsed_ms": 1385
+}

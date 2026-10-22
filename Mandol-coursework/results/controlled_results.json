@@ -1,0 +1,1626 @@
+{
+  "mode": "controlled fixed-response experiment; not real LLM evaluation",
+  "source_sha256": "45d1f294a915ad930520e3285cb99daf7533f00432e6c58ca579f8536855bb43",
+  "case_count": 15,
+  "results": [
+    {
+      "name": "完全重复",
+      "category": "可合并",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户偏好清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户偏好清淡饮食",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户偏好清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户偏好清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1",
+            "merged_from": [
+              "a",
+              "b"
+            ],
+            "source_session_ids": [
+              "session_a",
+              "session_b"
+            ],
+            "merge_method": "literal_clause_coverage_v1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [
+        {
+          "members": [
+            "a",
+            "b"
+          ],
+          "representative": "a",
+          "source_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "reason": "代表文本覆盖组内全部字面事实，且主体和摘要类型一致"
+        }
+      ],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 8
+      },
+      "prototype_metrics": {
+        "output_count": 1,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 8
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          8,
+          8
+        ]
+      ]
+    },
+    {
+      "name": "空格差异",
+      "category": "可合并",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户预算 3000 元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户预算3000元",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户预算 3000 元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户预算 3000 元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1",
+            "merged_from": [
+              "a",
+              "b"
+            ],
+            "source_session_ids": [
+              "session_a",
+              "session_b"
+            ],
+            "merge_method": "literal_clause_coverage_v1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [
+        {
+          "members": [
+            "a",
+            "b"
+          ],
+          "representative": "a",
+          "source_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "reason": "代表文本覆盖组内全部字面事实，且主体和摘要类型一致"
+        }
+      ],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 11
+      },
+      "prototype_metrics": {
+        "output_count": 1,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 11
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          11,
+          9
+        ]
+      ]
+    },
+    {
+      "name": "补充返回日期",
+      "category": "可合并",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "周五去上海",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "周五去上海；周日返回",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "周五去上海",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "周五去上海；周日返回",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1",
+            "merged_from": [
+              "a",
+              "b"
+            ],
+            "source_session_ids": [
+              "session_a",
+              "session_b"
+            ],
+            "merge_method": "literal_clause_coverage_v1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [
+        {
+          "members": [
+            "a",
+            "b"
+          ],
+          "representative": "b",
+          "source_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "reason": "代表文本覆盖组内全部字面事实，且主体和摘要类型一致"
+        }
+      ],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 0.5,
+        "text_chars": 5
+      },
+      "prototype_metrics": {
+        "output_count": 1,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 10
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          5,
+          10
+        ]
+      ]
+    },
+    {
+      "name": "补充行程约束",
+      "category": "可合并",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "周五去上海；不接受夜航",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "周五去上海",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "周五去上海；不接受夜航",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "周五去上海；不接受夜航",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1",
+            "merged_from": [
+              "a",
+              "b"
+            ],
+            "source_session_ids": [
+              "session_a",
+              "session_b"
+            ],
+            "merge_method": "literal_clause_coverage_v1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [
+        {
+          "members": [
+            "a",
+            "b"
+          ],
+          "representative": "a",
+          "source_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "reason": "代表文本覆盖组内全部字面事实，且主体和摘要类型一致"
+        }
+      ],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 11
+      },
+      "prototype_metrics": {
+        "output_count": 1,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 11
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          11,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "语义近似但字面不同",
+      "category": "保守保留",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户口味偏清淡",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户口味偏清淡",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 0.5,
+        "text_chars": 8
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 15
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          8,
+          7
+        ]
+      ]
+    },
+    {
+      "name": "否定冲突",
+      "category": "保守保留",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢辣",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户不喜欢辣",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢辣",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢辣",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户不喜欢辣",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 0.5,
+        "text_chars": 5
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 11
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "数字冲突",
+      "category": "保守保留",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "预算300元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "预算3000元",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "预算300元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "预算300元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "预算3000元",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 0.5,
+        "text_chars": 6
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 13
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "name": "时间更新",
+      "category": "保守保留",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "去年住北京",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "现在住上海",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "去年住北京",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "去年住北京",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "现在住上海",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 0.5,
+        "text_chars": 5
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 10
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "name": "不同用户",
+      "category": "保守保留",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "喜欢清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "喜欢清淡饮食",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u2"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "喜欢清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "喜欢清淡饮食",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "喜欢清淡饮食",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u2"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 6
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 12
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          6,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "不同摘要类型",
+      "category": "保守保留",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "周五去上海",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "episodic",
+          "content": "周五去上海",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "周五去上海",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "episodic",
+          "content": "周五去上海",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "周五去上海",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "episodic",
+          "content": "周五去上海",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 10
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 10
+      },
+      "baseline_prompt_item_lengths": []
+    },
+    {
+      "name": "结构化内容",
+      "category": "保守保留",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "{\"预算\":300}",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "{\"预算\":300}",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": true
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "{\"预算\":300}",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "{\"预算\":300}",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "{\"预算\":300}",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": true
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 10
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 20
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          10,
+          10
+        ]
+      ]
+    },
+    {
+      "name": "500字符后不同",
+      "category": "保守保留",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景；预算300元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景；预算3000元",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "b"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景；预算300元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景；预算300元",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景共同背景；预算3000元",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 0.6666666666666666,
+        "text_chars": 527
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 1055
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          500,
+          500
+        ]
+      ]
+    },
+    {
+      "name": "模型漏列输入",
+      "category": "异常建议",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢跑步",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户喜欢阅读",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [
+          "a"
+        ],
+        "merged_items": []
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢跑步",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢跑步",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户喜欢阅读",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 1,
+        "source_coverage": 0.5,
+        "literal_clause_coverage": 0.5,
+        "text_chars": 6
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 12
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          6,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "模型返回未知ID",
+      "category": "异常建议",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢跑步",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户喜欢阅读",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [],
+        "merged_items": [
+          {
+            "merged_from": [
+              "missing",
+              "a"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢跑步",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户喜欢阅读",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 0,
+        "source_coverage": 0.0,
+        "literal_clause_coverage": 0.0,
+        "text_chars": 0
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 12
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          6,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "组内重复ID",
+      "category": "异常建议",
+      "input": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢跑步",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户喜欢阅读",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "fixed_response": {
+        "unique_items": [
+          "b"
+        ],
+        "merged_items": [
+          {
+            "merged_from": [
+              "a",
+              "a"
+            ]
+          }
+        ]
+      },
+      "baseline_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢跑步",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户喜欢阅读",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "prototype_output": [
+        {
+          "session_id": "session_a",
+          "summary_type": "knowledge",
+          "content": "用户喜欢跑步",
+          "unit_uid": "a",
+          "source_unit_uids": [
+            "raw_a"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        },
+        {
+          "session_id": "session_b",
+          "summary_type": "knowledge",
+          "content": "用户喜欢阅读",
+          "unit_uid": "b",
+          "source_unit_uids": [
+            "raw_b"
+          ],
+          "metadata": {
+            "user_id": "u1"
+          },
+          "is_structured": false
+        }
+      ],
+      "merge_plans": [],
+      "baseline_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 12
+      },
+      "prototype_metrics": {
+        "output_count": 2,
+        "source_coverage": 1.0,
+        "literal_clause_coverage": 1.0,
+        "text_chars": 12
+      },
+      "baseline_prompt_item_lengths": [
+        [
+          6,
+          6
+        ]
+      ]
+    }
+  ]
+}

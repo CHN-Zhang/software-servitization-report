@@ -1,0 +1,18 @@
+{
+  "case_id": "scope_03",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:11.703Z",
+  "prompt_sha256": "7aee71c3e79ce87880d1908f64ddb353897ea6d9ad67af9744ffbbc84be0f816",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-dee018e9-6c30-9d08-8929-2ae62e6d0e1f",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"b\",\n                \"a\"\n            ],\n            \"result\": \"如果下雨；用户取消出行\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'a' (用户取消出行) is a subset of item 'b' (如果下雨；用户取消出行). Merged into the more complete summary 'b'.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 307,
+    "total_tokens": 436,
+    "completion_tokens": 129
+  },
+  "elapsed_ms": 1348
+}

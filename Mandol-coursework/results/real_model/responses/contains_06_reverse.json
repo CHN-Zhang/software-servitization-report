@@ -1,0 +1,18 @@
+{
+  "case_id": "contains_06",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:27.468Z",
+  "prompt_sha256": "78d2d72f48d8de0322d312d9ac8aadae26e2926810e1ddb1f32e6d28b04e797d",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-ad8b466c-65a6-9fdc-8c74-fee3b6ffb93c",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"项目使用Python；版本为3.12\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged item 'a' (project uses Python) and item 'b' (project uses Python; version 3.12). Item 'b' contains all information from 'a' plus additional details, so 'b' was kept as the result.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 311,
+    "total_tokens": 461,
+    "completion_tokens": 150
+  },
+  "elapsed_ms": 1436
+}

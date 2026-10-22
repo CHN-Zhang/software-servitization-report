@@ -1,0 +1,18 @@
+{
+  "case_id": "contains_06",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:27.394Z",
+  "prompt_sha256": "a5a0ffc686ea972117896b21410d2b5a75944cb995bcc7e64a4ae7bba71a568d",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-65f0c4a3-d6d8-9331-970b-5b72f2efc039",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\"a\", \"b\"],\n            \"result\": \"项目使用Python；版本为3.12\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'a' is a subset of item 'b'. Merged into item 'b' to preserve the most complete information.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 311,
+    "total_tokens": 426,
+    "completion_tokens": 115
+  },
+  "elapsed_ms": 1193
+}

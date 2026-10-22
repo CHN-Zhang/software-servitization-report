@@ -1,0 +1,18 @@
+{
+  "case_id": "negation_04",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:39.800Z",
+  "prompt_sha256": "e364fc698a5b3b593dd51538f730a88a7ace5bc91da86ef3d2128139b805c60d",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-188fce12-d706-98e6-b3b4-a457248ec2c9",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"b\",\n            \"content\": \"用户不喜欢花生\"\n        },\n        {\n            \"id\": \"a\",\n            \"content\": \"用户喜欢花生\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"No duplicates found. '用户不喜欢花生' (User dislikes peanuts) and '用户喜欢花生' (User likes peanuts) are contradictory statements representing distinct facts/states, not overlapping or duplicate information.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 446,
+    "completion_tokens": 142
+  },
+  "elapsed_ms": 1504
+}

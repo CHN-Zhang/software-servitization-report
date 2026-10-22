@@ -1,0 +1,9 @@
+# 单独下载的上游源码
+/Mandol/
+
+# Python 缓存与本地配置
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example

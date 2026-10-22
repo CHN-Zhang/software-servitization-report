@@ -1,0 +1,18 @@
+{
+  "case_id": "scope_06",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:13.759Z",
+  "prompt_sha256": "32f872b2ab3abe1674892d6c8d1a65a19a73a097b826a44a3329086e306b03c6",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-178b8435-3a78-9f3f-ae82-6837b9c4351b",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"b\",\n                \"a\"\n            ],\n            \"result\": \"如果设备可用；用户在家办公\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Summary 'a' (\\\"用户在家办公\\\") is a subset of Summary 'b' (\\\"如果设备可用；用户在家办公\\\"). Merged into the more complete summary 'b'.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 442,
+    "completion_tokens": 134
+  },
+  "elapsed_ms": 1241
+}

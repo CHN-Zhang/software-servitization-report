@@ -1,0 +1,18 @@
+{
+  "case_id": "contains_03",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:25.428Z",
+  "prompt_sha256": "8777d75dbc22f8648f205a970a101c4361b34e43de519443b9a6e4e204370c0d",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-edd0046f-a821-924c-9c7b-28144396d3df",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"b\",\n                \"a\"\n            ],\n            \"result\": \"会议在周一；地点在杭州\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'a' (会议在周一) is a subset of item 'b' (会议在周一；地点杭州). Merged into 'b' to preserve the most complete information.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 307,
+    "total_tokens": 438,
+    "completion_tokens": 131
+  },
+  "elapsed_ms": 1965
+}

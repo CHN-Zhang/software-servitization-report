@@ -1,0 +1,18 @@
+{
+  "case_id": "contains_04",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:25.581Z",
+  "prompt_sha256": "a847f06d54c70e0a824758f07cb60e07b6084808f07d7cd7303e4ce67d3c275c",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-2e0c2693-206b-9c72-8649-0493c25564e3",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"用户喜欢徒步；每周末参加\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'b' contains all information from item 'a' plus additional details ('每周末参加'). Merged into 'b' to preserve the most complete information.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 435,
+    "completion_tokens": 127
+  },
+  "elapsed_ms": 1884
+}

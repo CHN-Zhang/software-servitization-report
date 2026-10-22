@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/AgentCombo/Mandol.git",
+  "upstream_branch": "main",
+  "commit": "6d7af4f004e1b311fb5c93d3e14fab90677942d8",
+  "commit_time_utc": "2026-08-02T01:46:25Z",
+  "commit_message": "docs: add latency results to README and homepage",
+  "package_version": "0.1.0",
+  "python_requirement": ">=3.12, <3.13",
+  "verified_date_asia_shanghai": "2026-10-22",
+  "verification": "GitHub commits/main API SHA matches local git HEAD",
+  "local_source": "Mandol",
+  "local_baseline_tag": "coursework-baseline-20261022",
+  "dependency_lock": "Mandol/uv.lock",
+  "runtime_tested": false
+}

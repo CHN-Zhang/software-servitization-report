@@ -1,0 +1,18 @@
+{
+  "case_id": "negation_06",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:41.306Z",
+  "prompt_sha256": "9c40f782ac90e2a554ddf4624d79974322560af538548f9c59a547f3239d0f09",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-f4fb16a5-fa74-9339-94dc-c5c903eb822a",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 0,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"b\",\n            \"content\": \"用户不喜欢香菜\"\n        },\n        {\n            \"id\": \"a\",\n            \"content\": \"用户喜欢香菜\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"No duplicates found. '用户不喜欢香菜' and '用户喜欢香菜' are contradictory statements describing different user preferences, not overlapping or duplicate information.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 435,
+    "completion_tokens": 131
+  },
+  "elapsed_ms": 1179
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "paraphrase_04",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:37.218Z",
+  "prompt_sha256": "3626b98fcc9f9fc45a36c88517766ef1f0e40e6f5e0d3d53f8c878e3e96ffeca",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-439ef747-6691-9a0f-a5ab-d8094386d922",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\"a\", \"b\"],\n            \"result\": \"用户周六不用上班\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged 'a' (用户周六不用上班) and 'b' (用户星期六休息) as they convey the same meaning: the user does not work on Saturday.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 305,
+    "total_tokens": 423,
+    "completion_tokens": 118
+  },
+  "elapsed_ms": 1315
+}

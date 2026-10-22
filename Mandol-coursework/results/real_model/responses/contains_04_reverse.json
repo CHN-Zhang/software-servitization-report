@@ -1,0 +1,18 @@
+{
+  "case_id": "contains_04",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:25.618Z",
+  "prompt_sha256": "71718529638f50bbe70df481a2c91270ca98e55e42c3c590a74e6ecdecb67632",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-e5fe4835-9984-9258-98f5-c7945a54927e",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"用户喜欢徒步；每周末参加\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'a' ('用户喜欢徒步') is a subset of item 'b' ('用户喜欢徒步；每周末参加'). Merged into the more complete version from 'b'.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 440,
+    "completion_tokens": 132
+  },
+  "elapsed_ms": 1194
+}

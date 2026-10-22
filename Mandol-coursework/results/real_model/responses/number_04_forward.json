@@ -1,0 +1,18 @@
+{
+  "case_id": "number_04",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:50.112Z",
+  "prompt_sha256": "80500d2d6cef3927d708e1700c58b2696f2f44f696c35298d19d8bcba3c98873",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-ef510e1f-8589-925c-8a77-617355efc026",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"a\",\n            \"content\": \"本次预算为500元\"\n        },\n        {\n            \"id\": \"b\",\n            \"content\": \"本次预算为5000元\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"Item 'a' and Item 'b' describe different budget amounts (500 vs 5000), so they are considered distinct facts and kept as unique items.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 313,
+    "total_tokens": 460,
+    "completion_tokens": 147
+  },
+  "elapsed_ms": 1515
+}

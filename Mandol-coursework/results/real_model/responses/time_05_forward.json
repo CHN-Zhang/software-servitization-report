@@ -1,0 +1,18 @@
+{
+  "case_id": "time_05",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:54.041Z",
+  "prompt_sha256": "589463d0cb417cc0d18b4caefcf7ccc6d1c7e74b2453d06c85fc3719896bcc86",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-e2683b90-7be0-9c2a-8dd7-a16a65f41936",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"a\",\n            \"content\": \"用户去年住苏州\"\n        },\n        {\n            \"id\": \"b\",\n            \"content\": \"用户现在住无锡\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"No duplicates found. '用户去年住苏州' and '用户现在住无锡' describe different temporal states (past vs present) and locations (Suzhou vs Wuxi), so both are preserved as unique items.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 306,
+    "total_tokens": 455,
+    "completion_tokens": 149
+  },
+  "elapsed_ms": 1595
+}

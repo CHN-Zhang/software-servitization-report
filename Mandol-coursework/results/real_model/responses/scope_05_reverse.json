@@ -1,0 +1,18 @@
+{
+  "case_id": "scope_05",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:13.056Z",
+  "prompt_sha256": "3126fba8536bae9b1f235abbf3bee18d08ad039aab51ca271242748c0ec203e4",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-fdf6c58b-174f-9305-af86-7a3bcd4610a6",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"b\",\n                \"a\"\n            ],\n            \"result\": \"仅限紧急情况；用户接受加班\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'a' ('用户接受加班') is a subset of item 'b' ('仅限紧急情况；用户接受加班'). Merged into 'b' to preserve the most complete information.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 307,
+    "total_tokens": 438,
+    "completion_tokens": 131
+  },
+  "elapsed_ms": 1143
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "exact_05",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:24.334Z",
+  "prompt_sha256": "8f9a60da8a0c0dcf04307e38b811fc18eaf26e3e15a99d97446ffec1914a1a9d",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-55f47f8f-4f8a-997e-b0b4-1bc81e620616",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"b\",\n                \"a\"\n            ],\n            \"result\": \"用户不喝咖啡\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged items 'b' and 'a' as they contain identical content: '用户不喝咖啡'. Kept the first occurrence.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 421,
+    "completion_tokens": 117
+  },
+  "elapsed_ms": 1091
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "scope_03",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:11.524Z",
+  "prompt_sha256": "e648108843c73d02b330dccf9ee0297573a8ffe2c7173c0eddd6ce409106b8c0",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-6a4b95e8-1c16-969b-aa6d-5ee7a7411058",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"如果下雨；用户取消出行\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Summary 'b' contains all information from 'a' plus the condition '如果下雨'. Merged into 'b' as it is more complete.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 307,
+    "total_tokens": 430,
+    "completion_tokens": 123
+  },
+  "elapsed_ms": 1249
+}

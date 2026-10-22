@@ -1,0 +1,1165 @@
+{
+  "annotation_status": "AI-authored provisional synthetic gold; no independent human review",
+  "annotation_policy": "Only equivalent propositions or genuine factual containment may merge; preserve conditions, subject, numbers and temporal versions.",
+  "design": "8 strata x 6 pairs; first 2 per stratum dev, remaining 4 test; synthetic/template-dependent",
+  "cases": [
+    {
+      "id": "exact_01",
+      "category": "exact",
+      "split": "dev",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢跑步",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户喜欢跑步",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exact_02",
+      "category": "exact",
+      "split": "dev",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户通常周六休息",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户通常周六休息",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exact_03",
+      "category": "exact",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "项目在周一发布",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "项目在周一发布",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exact_04",
+      "category": "exact",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "午饭预算50元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "午饭预算50元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exact_05",
+      "category": "exact",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户不喝咖啡",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户不喝咖啡",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exact_06",
+      "category": "exact",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "会议地点在南京",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "会议地点在南京",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contains_01",
+      "category": "contains",
+      "split": "dev",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "周五去上海",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "周五去上海；周日返回",
+          "user": "u1",
+          "fact_ids": [
+            "f1",
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contains_02",
+      "category": "contains",
+      "split": "dev",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "购买蓝色衬衫",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "购买蓝色衬衫；尺码为M",
+          "user": "u1",
+          "fact_ids": [
+            "f1",
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contains_03",
+      "category": "contains",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "会议在周一",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "会议在周一；地点在杭州",
+          "user": "u1",
+          "fact_ids": [
+            "f1",
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contains_04",
+      "category": "contains",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢徒步",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户喜欢徒步；每周末参加",
+          "user": "u1",
+          "fact_ids": [
+            "f1",
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contains_05",
+      "category": "contains",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "报销截止周三",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "报销截止周三；需要纸质发票",
+          "user": "u1",
+          "fact_ids": [
+            "f1",
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contains_06",
+      "category": "contains",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "项目使用Python",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "项目使用Python；版本为3.12",
+          "user": "u1",
+          "fact_ids": [
+            "f1",
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paraphrase_01",
+      "category": "paraphrase",
+      "split": "dev",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢清淡饮食",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户的饮食口味偏清淡",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paraphrase_02",
+      "category": "paraphrase",
+      "split": "dev",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户每周跑步三次",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户一周进行三次跑步锻炼",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paraphrase_03",
+      "category": "paraphrase",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户不喝含糖饮料",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户避免饮用含糖饮品",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paraphrase_04",
+      "category": "paraphrase",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户周六不用上班",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户星期六休息",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paraphrase_05",
+      "category": "paraphrase",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户的预算上限为500元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户最多愿意花500元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paraphrase_06",
+      "category": "paraphrase",
+      "split": "test",
+      "mergeable": true,
+      "units": [
+        {
+          "uid": "a",
+          "text": "会议地点是北京",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "会议在北京举行",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negation_01",
+      "category": "negation",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢咖啡",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户不喜欢咖啡",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negation_02",
+      "category": "negation",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢辣椒",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户不喜欢辣椒",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negation_03",
+      "category": "negation",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢牛奶",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户不喜欢牛奶",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negation_04",
+      "category": "negation",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢花生",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户不喜欢花生",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negation_05",
+      "category": "negation",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢海鲜",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户不喜欢海鲜",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negation_06",
+      "category": "negation",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢香菜",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户不喜欢香菜",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "number_01",
+      "category": "number",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "本次预算为300元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "本次预算为3000元",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "number_02",
+      "category": "number",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "本次预算为20元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "本次预算为200元",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "number_03",
+      "category": "number",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "本次预算为15元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "本次预算为50元",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "number_04",
+      "category": "number",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "本次预算为500元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "本次预算为5000元",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "number_05",
+      "category": "number",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "本次预算为80元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "本次预算为800元",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "number_06",
+      "category": "number",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "本次预算为100元",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "本次预算为1000元",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_01",
+      "category": "time",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户去年住北京",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户现在住上海",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_02",
+      "category": "time",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户去年住南京",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户现在住杭州",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_03",
+      "category": "time",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户去年住武汉",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户现在住成都",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_04",
+      "category": "time",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户去年住深圳",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户现在住广州",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_05",
+      "category": "time",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户去年住苏州",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户现在住无锡",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_06",
+      "category": "time",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户去年住青岛",
+          "user": "u1",
+          "fact_ids": [
+            "f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户现在住济南",
+          "user": "u1",
+          "fact_ids": [
+            "f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subject_01",
+      "category": "subject",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户喜欢跑步",
+          "user": "u1",
+          "fact_ids": [
+            "u1_f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户喜欢跑步",
+          "user": "u2",
+          "fact_ids": [
+            "u2_f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subject_02",
+      "category": "subject",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户通常周六休息",
+          "user": "u1",
+          "fact_ids": [
+            "u1_f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户通常周六休息",
+          "user": "u2",
+          "fact_ids": [
+            "u2_f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subject_03",
+      "category": "subject",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "项目在周一发布",
+          "user": "u1",
+          "fact_ids": [
+            "u1_f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "项目在周一发布",
+          "user": "u2",
+          "fact_ids": [
+            "u2_f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subject_04",
+      "category": "subject",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "午饭预算50元",
+          "user": "u1",
+          "fact_ids": [
+            "u1_f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "午饭预算50元",
+          "user": "u2",
+          "fact_ids": [
+            "u2_f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subject_05",
+      "category": "subject",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户不喝咖啡",
+          "user": "u1",
+          "fact_ids": [
+            "u1_f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "用户不喝咖啡",
+          "user": "u2",
+          "fact_ids": [
+            "u2_f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subject_06",
+      "category": "subject",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "会议地点在南京",
+          "user": "u1",
+          "fact_ids": [
+            "u1_f1"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "会议地点在南京",
+          "user": "u2",
+          "fact_ids": [
+            "u2_f1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope_01",
+      "category": "scope",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户周五出发",
+          "user": "u1",
+          "fact_ids": [
+            "unconditional"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "如果没有加班；用户周五出发",
+          "user": "u1",
+          "fact_ids": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope_02",
+      "category": "scope",
+      "split": "dev",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户参加会议",
+          "user": "u1",
+          "fact_ids": [
+            "unconditional"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "只有收到邀请；用户参加会议",
+          "user": "u1",
+          "fact_ids": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope_03",
+      "category": "scope",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户取消出行",
+          "user": "u1",
+          "fact_ids": [
+            "unconditional"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "如果下雨；用户取消出行",
+          "user": "u1",
+          "fact_ids": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope_04",
+      "category": "scope",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户购买机票",
+          "user": "u1",
+          "fact_ids": [
+            "unconditional"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "如果报销获批；用户购买机票",
+          "user": "u1",
+          "fact_ids": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope_05",
+      "category": "scope",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户接受加班",
+          "user": "u1",
+          "fact_ids": [
+            "unconditional"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "仅限紧急情况；用户接受加班",
+          "user": "u1",
+          "fact_ids": [
+            "conditional"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope_06",
+      "category": "scope",
+      "split": "test",
+      "mergeable": false,
+      "units": [
+        {
+          "uid": "a",
+          "text": "用户在家办公",
+          "user": "u1",
+          "fact_ids": [
+            "unconditional"
+          ]
+        },
+        {
+          "uid": "b",
+          "text": "如果设备可用；用户在家办公",
+          "user": "u1",
+          "fact_ids": [
+            "conditional"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "paraphrase_05",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:38.455Z",
+  "prompt_sha256": "732a14727265d8a8fc9613b6b2b08c48851f628f05400413c2f59b93ffd3cd01",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-48d8a232-1fa7-96f8-8a51-5561fb04d38a",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"用户的预算上限为500元，用户最多愿意花500元\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged 'a' and 'b' as they convey the same factual information regarding the user's budget limit of 500 yuan.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 314,
+    "total_tokens": 447,
+    "completion_tokens": 133
+  },
+  "elapsed_ms": 1250
+}

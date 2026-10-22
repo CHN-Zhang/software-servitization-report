@@ -1,0 +1,18 @@
+{
+  "case_id": "paraphrase_03",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:37.218Z",
+  "prompt_sha256": "92ba90ac8f53d3392b3d539602f50a55e9cb5e1cdf7e54b3a45a4793a5a3c275",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-61f15b2b-b550-99ae-b0c8-0c6efc02c93b",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"用户避免饮用含糖饮品\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged 'a' (用户不喝含糖饮料) and 'b' (用户避免饮用含糖饮品) as they describe the same fact/state regarding avoiding sugary drinks.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 436,
+    "completion_tokens": 128
+  },
+  "elapsed_ms": 1445
+}

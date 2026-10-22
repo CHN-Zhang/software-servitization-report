@@ -1,0 +1,18 @@
+{
+  "case_id": "subject_04",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:09.464Z",
+  "prompt_sha256": "32ade9de5df23ce139924b03d0faa026dcca064f8be42e909e715141e49cc9e5",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-a51f5b93-ace9-92ee-84c5-84fa802994a3",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"午饭预算50元\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged items 'a' and 'b' as they contain identical content: '午饭预算50元'\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 423,
+    "completion_tokens": 115
+  },
+  "elapsed_ms": 1350
+}

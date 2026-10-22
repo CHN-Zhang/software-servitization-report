@@ -1,0 +1,18 @@
+{
+  "case_id": "time_06",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:54.847Z",
+  "prompt_sha256": "94174c152542fe344e382951c12715c3184dc3b12e75249aba8fea027a6d800e",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-be0d8c0a-5041-97ea-b32f-db572ee0f5e5",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"b\",\n            \"content\": \"用户现在住济南\"\n        },\n        {\n            \"id\": \"a\",\n            \"content\": \"用户去年住青岛\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"No duplicates found. '用户现在住济南' and '用户去年住青岛' describe different states at different times (current vs last year) in different locations (Jinan vs Qingdao). Both are unique and preserved.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 306,
+    "total_tokens": 455,
+    "completion_tokens": 149
+  },
+  "elapsed_ms": 1370
+}

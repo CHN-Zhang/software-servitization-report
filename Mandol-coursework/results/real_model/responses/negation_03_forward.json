@@ -1,0 +1,18 @@
+{
+  "case_id": "negation_03",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:39.704Z",
+  "prompt_sha256": "0f0bdbe436a16f9298cbb5c6e583c014b0581428e987938762faded6a2f49e1e",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-45863e10-9030-98e4-a617-a6445ba6c1e4",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"a\",\n            \"content\": \"用户喜欢牛奶\"\n        },\n        {\n            \"id\": \"b\",\n            \"content\": \"用户不喜欢牛奶\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"No duplicates found. '用户喜欢牛奶' and '用户不喜欢牛奶' represent contradictory states/opinions and are treated as unique distinct items.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 434,
+    "completion_tokens": 130
+  },
+  "elapsed_ms": 1361
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "number_06",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:51.690Z",
+  "prompt_sha256": "5cbadf7ee06abc667ab88d92aaf6f49c24f68134441e4f8914c31690b6cbab70",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-113d9620-e79b-9d64-a460-f2a58fbd0997",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"b\",\n            \"content\": \"本次预算为1000元\"\n        },\n        {\n            \"id\": \"a\",\n            \"content\": \"本次预算为100元\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"No duplicates found. Items 'a' and 'b' describe the same event (budget) but contain conflicting factual information (100 yuan vs 1000 yuan). Since they represent different states/facts rather than overlapping descriptions of the same fact, they are preserved as unique items.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 313,
+    "total_tokens": 484,
+    "completion_tokens": 171
+  },
+  "elapsed_ms": 1826
+}

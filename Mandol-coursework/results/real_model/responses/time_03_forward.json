@@ -1,0 +1,18 @@
+{
+  "case_id": "time_03",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:52.731Z",
+  "prompt_sha256": "753ea07c08ae8263311e459eac282b65eb163356a9991a7ac8a1be2adb7b89c4",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-3d0a7ece-79d7-9f25-b6b3-5bacfa52bd8b",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 0,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"a\",\n            \"content\": \"用户去年住武汉\"\n        },\n        {\n            \"id\": \"b\",\n            \"content\": \"用户现在住成都\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"No duplicates found. '用户去年住武汉' and '用户现在住成都' describe different states at different times.\",\n        \"All items are unique and preserved.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 306,
+    "total_tokens": 444,
+    "completion_tokens": 138
+  },
+  "elapsed_ms": 1308
+}

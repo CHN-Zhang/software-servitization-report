@@ -1,0 +1,18 @@
+{
+  "case_id": "paraphrase_06",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:38.664Z",
+  "prompt_sha256": "8543c7add3848909c3bf3e89d4f1d44bd1ab577923fc8d546d85178fd597385b",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-142496e0-dc4b-97e4-9b34-190cf73b7267",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"b\",\n                \"a\"\n            ],\n            \"result\": \"会议在北京举行\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged 'b' (会议在北京举行) and 'a' (会议地点是北京) as they convey the same factual information regarding the meeting location.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 425,
+    "completion_tokens": 121
+  },
+  "elapsed_ms": 1038
+}

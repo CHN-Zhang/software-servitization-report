@@ -1,0 +1,22 @@
+{
+  "base_url": "https://cn-beijing.maas.qianwenaiapi.com/compatible-mode/v1",
+  "settings": {
+    "model": "qwen3.6-flash",
+    "temperature": 0.1,
+    "max_tokens": 1000,
+    "enable_thinking": false,
+    "stream": false
+  },
+  "case_count": 32,
+  "requests": 64,
+  "concurrency": 4,
+  "dataset_sha256": "22898b2627a3335c026f2992c9fbcf44c9bf2c320354e79f48145012a168ef6d",
+  "prompt_sha256": "dcf535afefb0968781d0d8aea8469e551b115347c7844df3806b27a795e3934e",
+  "started_at": "2026-10-22T18:42:53.809Z",
+  "annotation_status": "AI-authored provisional synthetic gold; no independent human review",
+  "finished_at": "2026-10-22T18:44:16.089Z",
+  "transport_counts": {
+    "ok": 64,
+    "failed": 0
+  }
+}

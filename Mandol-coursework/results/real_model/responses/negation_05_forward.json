@@ -1,0 +1,18 @@
+{
+  "case_id": "negation_05",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:41.069Z",
+  "prompt_sha256": "571f14a045ffa8e2815659f587db6e26353b884f7274f3ab0c45a3ab3198a4ee",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-ec9a688e-e6c7-970e-b24f-d418a0099a7d",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"a\",\n            \"content\": \"用户喜欢海鲜\"\n        },\n        {\n            \"id\": \"b\",\n            \"content\": \"用户不喜欢海鲜\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"No duplicates found. Items 'a' and 'b' express contradictory preferences (like vs dislike) regarding the same topic (seafood), so they are treated as distinct unique facts.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 443,
+    "completion_tokens": 139
+  },
+  "elapsed_ms": 1233
+}

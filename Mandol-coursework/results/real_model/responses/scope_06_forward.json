@@ -1,0 +1,18 @@
+{
+  "case_id": "scope_06",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:13.410Z",
+  "prompt_sha256": "4b4075d49ff98d970448ad7d28aa0bdeeeb7f54fbd08d3337c05cdf2d2a1f1b2",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-8534ccc2-1d2d-9b04-8985-03d1a096613d",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"用户在家办公\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'b' contains the same core fact as item 'a' ('用户在家办公') with an additional conditional clause ('如果设备可用'). Since the condition does not change the primary state described in 'a' and 'a' is more concise while retaining the core meaning, they are merged into the most complete yet concise representation: '用户在家办公'.\",\n        \"Note: Depending on strictness, if the condition '如果设备可用' is considered critical context, the result might be '如果设备可用，用户在家办公'. However, based on standard deduplication where 'a' is a subset of 'b's intent, keeping the simpler form is often preferred unless the condition changes the truth value. Here, we assume 'a' represents the general case.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 555,
+    "completion_tokens": 247
+  },
+  "elapsed_ms": 2678
+}

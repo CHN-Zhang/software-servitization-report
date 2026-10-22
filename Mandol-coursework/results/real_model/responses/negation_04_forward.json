@@ -1,0 +1,18 @@
+{
+  "case_id": "negation_04",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:39.726Z",
+  "prompt_sha256": "153a9ccc70bb1c2cb4fd9aa6e7fb3cbb837427a6ed0f7573d6148b2fc6cd83bd",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-8f93c334-6c48-9adb-9e47-f1dcdc8c7558",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        {\n            \"id\": \"a\",\n            \"content\": \"用户喜欢花生\"\n        },\n        {\n            \"id\": \"b\",\n            \"content\": \"用户不喜欢花生\"\n        }\n    ],\n    \"deduplication_log\": [\n        \"Items 'a' and 'b' express contradictory sentiments (like vs dislike) regarding the same subject. They are not duplicates but distinct, opposing facts/opinions. Therefore, both are preserved as unique items.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 448,
+    "completion_tokens": 144
+  },
+  "elapsed_ms": 1485
+}

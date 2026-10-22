@@ -1,0 +1,18 @@
+{
+  "case_id": "number_05",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:51.579Z",
+  "prompt_sha256": "057545e90f8be1c0ada0fae75eae6dccb0604b0b6f401969354a781c9157649a",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-88408564-a2b1-9b47-85d6-670eaaad2132",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 2,\n    \"original_count\": 2,\n    \"merged_items\": [],\n    \"unique_items\": [\n        \"a\",\n        \"b\"\n    ],\n    \"deduplication_log\": [\n        \"Item 'a' (80元) and Item 'b' (800元) contain conflicting numerical values for the same field ('budget'). They are treated as distinct facts or potential errors rather than duplicates, so both are preserved.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 311,
+    "total_tokens": 424,
+    "completion_tokens": 113
+  },
+  "elapsed_ms": 1147
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "subject_06",
+  "reverse": true,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:10.815Z",
+  "prompt_sha256": "a860e51f7f3a735be7b3d0181f749ef8ec83041d3122bf20d570bbb4e83feb45",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-22865281-3c1b-911a-b042-67fb183267eb",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"b\",\n                \"a\"\n            ],\n            \"result\": \"会议地点在南京\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Merged items 'b' and 'a' as they contain identical content: '会议地点在南京'. Kept one instance to remove duplication.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 423,
+    "completion_tokens": 119
+  },
+  "elapsed_ms": 1108
+}

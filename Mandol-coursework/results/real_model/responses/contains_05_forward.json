@@ -1,0 +1,18 @@
+{
+  "case_id": "contains_05",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:43:26.657Z",
+  "prompt_sha256": "be7f0c66ea3cdcc33680e8afb2cd06af76a62f01e3ab99132f343dfa4f0f9b2c",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-947f1b79-67df-9182-bd05-a081604457b3",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"报销截止周三；需要纸质发票\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Item 'b' contains all information from item 'a' plus additional details ('需要纸质发票'). Merged 'a' into 'b' to preserve the most complete information.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 438,
+    "completion_tokens": 130
+  },
+  "elapsed_ms": 1224
+}

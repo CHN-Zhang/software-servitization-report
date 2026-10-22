@@ -1,0 +1,18 @@
+{
+  "case_id": "scope_04",
+  "reverse": false,
+  "requested_model": "qwen3.6-flash",
+  "started_at": "2026-10-22T18:44:11.924Z",
+  "prompt_sha256": "35ecd578a499c08d1c529cdf2bd05b2cb443e2b6adc569779a4ae052cf47b25b",
+  "status": 200,
+  "model": "qwen3.6-flash",
+  "response_id": "chatcmpl-1fede66f-66c0-955f-8346-22a93138178a",
+  "finish_reason": "stop",
+  "content": "{\n    \"deduplicated_count\": 1,\n    \"original_count\": 2,\n    \"merged_items\": [\n        {\n            \"merged_from\": [\n                \"a\",\n                \"b\"\n            ],\n            \"result\": \"用户购买机票\"\n        }\n    ],\n    \"unique_items\": [],\n    \"deduplication_log\": [\n        \"Summary 'b' contains the core event of summary 'a' ('用户购买机票') with an additional conditional clause ('如果报销获批'). Since the condition does not change the fundamental fact that the user purchased the ticket (it describes a prerequisite or context for reimbursement rather than a different action), and 'a' is the concise representation of the core event, they are considered duplicates/overlapping. The merged result retains the core event.\"\n    ]\n}",
+  "usage": {
+    "prompt_tokens": 308,
+    "total_tokens": 485,
+    "completion_tokens": 177
+  },
+  "elapsed_ms": 1830
+}
