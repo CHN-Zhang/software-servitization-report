@@ -1,0 +1,194 @@
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:316 - INFO - Initializing embedding model: coursework/feature-fixture-v1
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:387 - INFO -  Local embedding model initialized: coursework/feature-fixture-v1
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:401 - WARNING - The primary embedding model does not declare image support; the separate image model path is disabled. Use a unified multimodal model whose MODEL_CONFIG modalities include 'image' for image embeddings.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:722 - INFO - Created IndexIDMap index with base type: Flat (inner product over normalized vectors for cosine similarity)
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:731 - INFO - FAISS index 'IDMap,Flat' initialized. Total vectors: 0
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:436 - INFO -  SemanticMap initialization complete:
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:437 - INFO -    - embedding model: coursework/feature-fixture-v1  (local, standard)
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:438 - INFO -    - supported modalities: text
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:439 - INFO -    - image model:  (disabled/unavailable)
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:440 - INFO -    - embedding dimension: 6
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:441 - INFO -    - FAISS index: IDMap,Flat
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:58 - INFO - SemanticGraph initialized with the rustworkx backend.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1353 - INFO - Memory unit 'raw_a' has been added or updated in SemanticMap.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1703 - INFO - Automatically creating memory space: L0
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:962 - INFO - Memory space 'L0' created
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:135 - INFO - MultiRetriever initialized in lazy-loading mode.
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:162 - INFO - Lazy-loading retriever: bm25
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:1556 - INFO - Added retriever: bm25
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:183 - INFO - Retriever loaded successfully: bm25
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1246 - INFO - BM25 index is not built; falling back to build_index.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 1 documents.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=1, vocab=2, avgdl=2.0
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1353 - INFO - Memory unit 'raw_b' has been added or updated in SemanticMap.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1266 - INFO -  BM25 incremental update complete: added 1, total 2
+2026-10-29 21:53:34 - AgentMemorySystem.auto_builder.session_tracker - session_tracker.py:40 - INFO - SessionTracker initialized
+2026-10-29 21:53:34 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:116 - INFO - HierarchicalAutoBuilder initialized
+2026-10-29 21:53:34 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:117 - INFO -    - extraction_style: default
+2026-10-29 21:53:34 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:118 - INFO -    - Contextual Retrieval: disabled
+2026-10-29 21:53:34 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:119 - INFO -    - chunking: disabled
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:510 - INFO -  SemanticGraph starting batch insertion for 1 units...
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1481 - INFO -  Starting batch insertion for 1 memory units...
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1509 - INFO - Text extraction complete: 1 with text, 0 without text, 0 skipped
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1521 - INFO -  Generating dense embeddings for 1 texts...
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1543 - INFO -  Dense embedding generation complete: 1 embeddings
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1552 - INFO -  Storing memory units in batch...
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1703 - INFO - Automatically creating memory space: L1
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:962 - INFO - Memory space 'L1' created
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1611 - INFO -  Batch insertion complete: added 1, skipped 0, dense 1, sparse 0, elapsed 0.00s
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:553 - INFO -  Synchronizing units into the rustworkx graph...
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:602 - INFO -  SemanticGraph batch insert complete: added 1, graph nodes (created 1, updated 0), elapsed 0.00s
+2026-10-29 21:53:34 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:875 - INFO - Added to semantic system: L1=1, L2=0
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1353 - INFO - Memory unit 'budget' has been added or updated in SemanticMap.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1266 - INFO -  BM25 incremental update complete: added 1, total 3
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1353 - INFO - Memory unit 'control' has been added or updated in SemanticMap.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1266 - INFO -  BM25 incremental update complete: added 1, total 4
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:720 - INFO - Added relationship 'DERIVED_FROM' from 'b' to 'raw_a'.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:720 - INFO - Added relationship 'DERIVED_FROM' from 'b' to 'raw_b'.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:720 - INFO - Added relationship 'CONTROL_EDGE' from 'budget' to 'control'.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:722 - INFO - Created IndexIDMap index with base type: Flat (inner product over normalized vectors for cosine similarity)
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:731 - INFO - FAISS index 'IDMap,Flat' initialized. Total vectors: 0
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:2062 - INFO - FAISS index built or rebuilt successfully with 5 vectors.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 5 documents.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=5, vocab=9, avgdl=3.0
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1168 - INFO - remove_uids: removed 1 documents, L1 remaining docs=3, vocab=6
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:1845 - INFO - Memory unit 'control' deleted from SemanticMap
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:722 - INFO - Created IndexIDMap index with base type: Flat (inner product over normalized vectors for cosine similarity)
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:731 - INFO - FAISS index 'IDMap,Flat' initialized. Total vectors: 0
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:2062 - INFO - FAISS index built or rebuilt successfully with 4 vectors.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:811 - INFO - Node 'control' (index: 4) and its relationships were removed from the rustworkx graph.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:896 - WARNING - Node 'control' is missing from both memory and external storage.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 4 documents.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=4, vocab=6, avgdl=3.0
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:1684 - INFO - Saving SemanticGraph to sandbox directory: E:\OOPhomework\tmp\mandol-graph-zwf850mt\resident\snapshot
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:2874 - INFO - FAISS index saved to: E:\OOPhomework\tmp\mandol-graph-zwf850mt\resident\snapshot\semantic_map_data\faiss_index.bin
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:2894 - INFO - Dense embeddings saved (safetensors), shape: (4, 6)
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:2912 - INFO - build_sparse_vectors=False, skipped 4 units from external storageSPLADE sparse embedding auto-build
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_map - semantic_map.py:3000 - INFO - Optimized save complete (v3 safetensors).
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:1703 - INFO - Rustworkx graph saved (Pickle): 0.00 MB
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:135 - INFO - MultiRetriever initialized in lazy-loading mode.
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:1742 - INFO - Calling build_all_indexes for retriever indexes: ['bm25']
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:586 - INFO - Building retriever indexes.
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:590 - INFO - Building specified retrievers: ['bm25']
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:162 - INFO - Lazy-loading retriever: bm25
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:1556 - INFO - Added retriever: bm25
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:183 - INFO - Retriever loaded successfully: bm25
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:644 - INFO - Building bm25 index.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 4 documents.
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=4, vocab=6, avgdl=3.0
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:648 - INFO - bm25 index built in 0.00s.
+2026-10-29 21:53:34 - AgentMemorySystem.advance_retriever - advance_retriever.py:669 - INFO - Index build complete: built 1, skipped 0, failed 0, duration 0.00s
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:1747 - INFO - build_all_indexes complete: {'total_retrievers': 1, 'built_count': 1, 'skipped_count': 0, 'failed_count': 0, 'total_duration': 0.0009999275207519531, 'details': {'bm25': {'status': 'success', 'duration': 0.0009999275207519531}}}
+2026-10-29 21:53:34 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1795 - INFO - BM25 index saved to E:\OOPhomework\tmp\mandol-graph-zwf850mt\resident\snapshot\retrieval_indices\bm25 (docs=4, vocab=6, size=0.00 MB)
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:1761 - INFO - BM25 index saved
+2026-10-29 21:53:34 - AgentMemorySystem.semantic_graph - semantic_graph.py:1849 - INFO - SemanticGraph sandbox save complete.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:316 - INFO - Initializing embedding model: coursework/feature-fixture-v1
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:387 - INFO -  Local embedding model initialized: coursework/feature-fixture-v1
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:401 - WARNING - The primary embedding model does not declare image support; the separate image model path is disabled. Use a unified multimodal model whose MODEL_CONFIG modalities include 'image' for image embeddings.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:722 - INFO - Created IndexIDMap index with base type: Flat (inner product over normalized vectors for cosine similarity)
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:731 - INFO - FAISS index 'IDMap,Flat' initialized. Total vectors: 0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:436 - INFO -  SemanticMap initialization complete:
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:437 - INFO -    - embedding model: coursework/feature-fixture-v1  (local, standard)
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:438 - INFO -    - supported modalities: text
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:439 - INFO -    - image model:  (disabled/unavailable)
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:440 - INFO -    - embedding dimension: 6
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:441 - INFO -    - FAISS index: IDMap,Flat
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:58 - INFO - SemanticGraph initialized with the rustworkx backend.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1353 - INFO - Memory unit 'raw_a' has been added or updated in SemanticMap.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1703 - INFO - Automatically creating memory space: L0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:962 - INFO - Memory space 'L0' created
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:135 - INFO - MultiRetriever initialized in lazy-loading mode.
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:162 - INFO - Lazy-loading retriever: bm25
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:1556 - INFO - Added retriever: bm25
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:183 - INFO - Retriever loaded successfully: bm25
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1246 - INFO - BM25 index is not built; falling back to build_index.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 1 documents.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=1, vocab=2, avgdl=2.0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1353 - INFO - Memory unit 'raw_b' has been added or updated in SemanticMap.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1266 - INFO -  BM25 incremental update complete: added 1, total 2
+2026-10-29 21:53:43 - AgentMemorySystem.auto_builder.session_tracker - session_tracker.py:40 - INFO - SessionTracker initialized
+2026-10-29 21:53:43 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:116 - INFO - HierarchicalAutoBuilder initialized
+2026-10-29 21:53:43 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:117 - INFO -    - extraction_style: default
+2026-10-29 21:53:43 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:118 - INFO -    - Contextual Retrieval: disabled
+2026-10-29 21:53:43 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:119 - INFO -    - chunking: disabled
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:510 - INFO -  SemanticGraph starting batch insertion for 1 units...
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1481 - INFO -  Starting batch insertion for 1 memory units...
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1509 - INFO - Text extraction complete: 1 with text, 0 without text, 0 skipped
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1521 - INFO -  Generating dense embeddings for 1 texts...
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1543 - INFO -  Dense embedding generation complete: 1 embeddings
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1552 - INFO -  Storing memory units in batch...
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1703 - INFO - Automatically creating memory space: L1
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:962 - INFO - Memory space 'L1' created
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1611 - INFO -  Batch insertion complete: added 1, skipped 0, dense 1, sparse 0, elapsed 0.00s
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:553 - INFO -  Synchronizing units into the rustworkx graph...
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:602 - INFO -  SemanticGraph batch insert complete: added 1, graph nodes (created 1, updated 0), elapsed 0.00s
+2026-10-29 21:53:43 - AgentMemorySystem.auto_builder.hierarchical_builder - hierarchical_builder.py:875 - INFO - Added to semantic system: L1=1, L2=0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1353 - INFO - Memory unit 'budget' has been added or updated in SemanticMap.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1266 - INFO -  BM25 incremental update complete: added 1, total 3
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1353 - INFO - Memory unit 'control' has been added or updated in SemanticMap.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1266 - INFO -  BM25 incremental update complete: added 1, total 4
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:720 - INFO - Added relationship 'DERIVED_FROM' from 'b' to 'raw_a'.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:720 - INFO - Added relationship 'DERIVED_FROM' from 'b' to 'raw_b'.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:720 - INFO - Added relationship 'CONTROL_EDGE' from 'budget' to 'control'.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:722 - INFO - Created IndexIDMap index with base type: Flat (inner product over normalized vectors for cosine similarity)
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:731 - INFO - FAISS index 'IDMap,Flat' initialized. Total vectors: 0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:2062 - INFO - FAISS index built or rebuilt successfully with 5 vectors.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 5 documents.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=5, vocab=9, avgdl=3.0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:251 - INFO - RocksDB-backed tiered payload storage connected: E:\OOPhomework\tmp\mandol-graph-zwf850mt\rocksdb\live-db\payloads.rocksdb
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:648 - INFO - Tiered storage evicted 3 payloads; indexes, UID mappings, MemorySpace membership, and graph topology remain resident.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 5 documents.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=5, vocab=9, avgdl=3.0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:648 - INFO - Tiered storage evicted 5 payloads; indexes, UID mappings, MemorySpace membership, and graph topology remain resident.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1168 - INFO - remove_uids: removed 1 documents, L1 remaining docs=3, vocab=6
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:1845 - INFO - Memory unit 'control' deleted from SemanticMap
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:722 - INFO - Created IndexIDMap index with base type: Flat (inner product over normalized vectors for cosine similarity)
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:731 - INFO - FAISS index 'IDMap,Flat' initialized. Total vectors: 0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:2062 - INFO - FAISS index built or rebuilt successfully with 4 vectors.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:811 - INFO - Node 'control' (index: 4) and its relationships were removed from the rustworkx graph.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:896 - WARNING - Node 'control' is missing from both memory and external storage.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 4 documents.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=4, vocab=6, avgdl=3.0
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:648 - INFO - Tiered storage evicted 2 payloads; indexes, UID mappings, MemorySpace membership, and graph topology remain resident.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:1684 - INFO - Saving SemanticGraph to sandbox directory: E:\OOPhomework\tmp\mandol-graph-zwf850mt\rocksdb\snapshot
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:2874 - INFO - FAISS index saved to: E:\OOPhomework\tmp\mandol-graph-zwf850mt\rocksdb\snapshot\semantic_map_data\faiss_index.bin
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:2894 - INFO - Dense embeddings saved (safetensors), shape: (2, 6)
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:2912 - INFO - build_sparse_vectors=False, skipped 2 units from external storageSPLADE sparse embedding auto-build
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_map - semantic_map.py:3000 - INFO - Optimized save complete (v3 safetensors).
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:1703 - INFO - Rustworkx graph saved (Pickle): 0.00 MB
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:135 - INFO - MultiRetriever initialized in lazy-loading mode.
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:1742 - INFO - Calling build_all_indexes for retriever indexes: ['bm25']
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:586 - INFO - Building retriever indexes.
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:590 - INFO - Building specified retrievers: ['bm25']
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:162 - INFO - Lazy-loading retriever: bm25
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:1556 - INFO - Added retriever: bm25
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:183 - INFO - Retriever loaded successfully: bm25
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:644 - INFO - Building bm25 index.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 4 documents.
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=4, vocab=6, avgdl=3.0
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:648 - INFO - bm25 index built in 0.00s.
+2026-10-29 21:53:43 - AgentMemorySystem.advance_retriever - advance_retriever.py:669 - INFO - Index build complete: built 1, skipped 0, failed 0, duration 0.00s
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:1747 - INFO - build_all_indexes complete: {'total_retrievers': 1, 'built_count': 1, 'skipped_count': 0, 'failed_count': 0, 'total_duration': 0.0, 'details': {'bm25': {'status': 'success', 'duration': 0.0}}}
+2026-10-29 21:53:43 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1795 - INFO - BM25 index saved to E:\OOPhomework\tmp\mandol-graph-zwf850mt\rocksdb\snapshot\retrieval_indices\bm25 (docs=4, vocab=6, size=0.00 MB)
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:1761 - INFO - BM25 index saved
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:1791 - INFO - RocksDB payload checkpoint ready: E:\OOPhomework\tmp\mandol-graph-zwf850mt\rocksdb\snapshot\l2_database\payloads.rocksdb
+2026-10-29 21:53:43 - AgentMemorySystem.semantic_graph - semantic_graph.py:1849 - INFO - SemanticGraph sandbox save complete.
+PASS: resident and RocksDB modes, fresh-process roundtrips. Artifacts: E:\OOPhomework\tmp\mandol-graph-zwf850mt

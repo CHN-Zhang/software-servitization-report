@@ -6,9 +6,11 @@
 
 ## 先看哪些材料
 
-- [演示汇报 PDF](report/Mandol近重复记忆合并_演示汇报.pdf)：10 页横向演示稿，介绍系统结构、问题和初步方案，暂不放入小规模实验结果。
+- [演示汇报 PDF](report/Mandol近重复记忆合并_演示汇报.pdf)：11 页横向演示稿，介绍系统结构、初步方案和存储链路验证，不放入小规模语义实验分数。
+- [逐页讲稿 PDF](report/Mandol近重复记忆合并_汇报讲稿.pdf)：与11页演示稿一一对应，按口语写成，可直接参考讲解；另有[可编辑讲稿](汇报讲稿.md)。原参考资料链接也已更新为讲稿。
 - [阶段报告](阶段报告.md)：较完整的过程记录，其中第 8 节保留了补做的实验及局限。
 - [课堂分享提纲](课堂分享提纲.md)：准备课堂分享时参考的提纲。
+- [图存储与恢复验证](图存储与恢复验证.md)：真实图、FAISS/BM25检索及RocksDB保存恢复的检查范围与结果。
 
 ## 为什么考虑这个问题
 
@@ -27,7 +29,8 @@
 | 小规模实验 | 已做受控、离线及真实模型组件实验，不能代替系统验证 |
 | 接入 Mandol 原流程 | 未完成 |
 | 条件范围、语义近似等判断 | 仍有问题，需要改进 |
-| 人工复核标注、L2 与检索评测、保存恢复验证 | 未完成 |
+| 图、FAISS/BM25及保存恢复一致性 | 已通过小型真实组件检查，嵌入使用确定性测试向量 |
+| 人工复核标注、L2 与真实语义检索效果 | 未完成 |
 
 ## 文件说明
 
@@ -82,6 +85,17 @@ python -m unittest test_study -v
 
 数据和初始标注由 AI 编写，尚未经过独立人工复核。原型仍会误合并部分条件句。来源 ID 保留、文本字符减少也不等于语义完全正确或实际节省了相同比例的内存。
 
+## 检查图存储与保存恢复
+
+图与存储检查单独运行，不需要密钥，但需要安装较完整的依赖：
+
+```powershell
+python -m pip install -r requirements-graph-test.txt
+python verify_graph_storage.py
+```
+
+请先按[验证说明](图存储与恢复验证.md)准备tmp目录。此检查使用真实图和索引，不评价语义模型质量。
+
 ## 如需重新调用模型
 
 在本机环境变量中配置 DASHSCOPE_API_KEY，不要把密钥写进脚本或提交到仓库。可通过 DASHSCOPE_BASE_URL 配置兼容接口地址，然后执行：
@@ -99,6 +113,7 @@ python collect_model.py --model qwen3.6-flash --output results/real_model_new
 ```powershell
 python -m pip install -r requirements-report.txt
 python build_slide_pdf.py
+python build_speech_pdf.py
 ```
 
 结果写入 report/。如果在其他系统运行，需要先将脚本中的字体路径改成本机可用的中文字体。

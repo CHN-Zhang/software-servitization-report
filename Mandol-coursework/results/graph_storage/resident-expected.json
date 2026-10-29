@@ -1,0 +1,136 @@
+{
+  "units": [
+    {
+      "uid": "b",
+      "raw_data": {
+        "text_content": "Shanghai Friday; return Sunday",
+        "summary_type": "knowledge",
+        "session_id": "s2",
+        "is_structured": false
+      },
+      "metadata": {
+        "layer": "L1",
+        "user_id": "u1",
+        "merged_from": [
+          "a",
+          "b"
+        ],
+        "source_session_ids": [
+          "s1",
+          "s2"
+        ],
+        "merge_method": "literal_clause_coverage_v1",
+        "source_unit_uids": [
+          "raw_a",
+          "raw_b"
+        ]
+      },
+      "embedding": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "uid": "budget",
+      "raw_data": {
+        "text_content": "budget 300"
+      },
+      "metadata": {
+        "kind": "fixture"
+      },
+      "embedding": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "uid": "raw_a",
+      "raw_data": {
+        "text_content": "Shanghai Friday"
+      },
+      "metadata": {
+        "kind": "fixture"
+      },
+      "embedding": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "uid": "raw_b",
+      "raw_data": {
+        "text_content": "Shanghai Friday; return Sunday"
+      },
+      "metadata": {
+        "kind": "fixture"
+      },
+      "embedding": [
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    }
+  ],
+  "edges": [
+    [
+      "b",
+      "raw_a",
+      "DERIVED_FROM"
+    ],
+    [
+      "b",
+      "raw_b",
+      "DERIVED_FROM"
+    ]
+  ],
+  "spaces": {
+    "L0": [
+      "raw_a",
+      "raw_b"
+    ],
+    "L1": [
+      "b",
+      "budget"
+    ]
+  },
+  "uid_mapping": {
+    "raw_a": 0,
+    "raw_b": 1,
+    "budget": 2,
+    "control": 3,
+    "b": 4
+  },
+  "retrieval": {
+    "dense": [
+      [
+        "b",
+        1.0
+      ],
+      [
+        "budget",
+        0.5
+      ]
+    ],
+    "bm25": [
+      [
+        "b",
+        0.602737
+      ]
+    ]
+  }
+}

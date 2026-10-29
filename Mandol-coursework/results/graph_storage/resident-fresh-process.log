@@ -1,0 +1,28 @@
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_graph - semantic_graph.py:1870 - INFO - Loading SemanticGraph from: E:\OOPhomework\tmp\mandol-graph-zwf850mt\resident\snapshot
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:316 - INFO - Initializing embedding model: coursework/feature-fixture-v1
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:387 - INFO -  Local embedding model initialized: coursework/feature-fixture-v1
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:401 - WARNING - The primary embedding model does not declare image support; the separate image model path is disabled. Use a unified multimodal model whose MODEL_CONFIG modalities include 'image' for image embeddings.
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:722 - INFO - Created IndexIDMap index with base type: Flat (inner product over normalized vectors for cosine similarity)
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:731 - INFO - FAISS index 'IDMap,Flat' initialized. Total vectors: 0
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:436 - INFO -  SemanticMap initialization complete:
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:437 - INFO -    - embedding model: coursework/feature-fixture-v1  (local, standard)
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:438 - INFO -    - supported modalities: text
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:439 - INFO -    - image model:  (disabled/unavailable)
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:440 - INFO -    - embedding dimension: 6
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:441 - INFO -    - FAISS index: IDMap,Flat
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:3068 - INFO - [v3] Loaded 4 dense embeddings (safetensors)
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:3118 - INFO - [v3] global_id_mapping loaded from JSON
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:3135 - INFO - Restored FAISS index directly with 4 vectors
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:962 - INFO - Memory space 'L0' created
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_map - semantic_map.py:962 - INFO - Memory space 'L1' created
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_graph - semantic_graph.py:58 - INFO - SemanticGraph initialized with the rustworkx backend.
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_graph - semantic_graph.py:1904 - INFO - Loaded rustworkx graph: 4 nodes, 2 edges
+2026-10-29 21:53:42 - AgentMemorySystem.semantic_graph - semantic_graph.py:1921 - INFO - Detected retriever index directory: E:\OOPhomework\tmp\mandol-graph-zwf850mt\resident\snapshot\retrieval_indices, it will be loaded when MultiRetriever is first requested
+2026-10-29 21:53:42 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:42 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+2026-10-29 21:53:42 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1210 - INFO - Building BM25 inverted index for 4 documents.
+2026-10-29 21:53:42 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1235 - INFO - BM25 inverted index built: docs=4, vocab=6, avgdl=3.0
+2026-10-29 21:53:42 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:533 - INFO - BM25 stop-word set initialized with 244 terms.
+2026-10-29 21:53:42 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:264 - WARNING - Mandol BM25: spaCy package is not installed; using regex tokenization.
+{"fresh_process_roundtrip": true, "persisted_bm25_load": true}
+2026-10-29 21:53:42 - AgentMemorySystem.bm25_retriever - bm25_retriever.py:1895 - INFO - BM25 index loaded from disk: E:\OOPhomework\tmp\mandol-graph-zwf850mt\resident\snapshot\retrieval_indices\bm25 (docs=4, vocab=6, avgdl=3.0)

@@ -1,0 +1,76 @@
+{
+  "scope": "real graph, FAISS, BM25, RocksDB and disk checkpoints; controlled embeddings; no LLM or semantic-quality evaluation",
+  "upstream_files_sha256": {
+    "src\\mandol\\core\\semantic_graph.py": "9605aa0aaa2bb09b5fe4f27adf630053388d1c16cb9cd0fcb515f130132c52cb",
+    "src\\mandol\\core\\semantic_map.py": "4893c6a65da8df77b43c9cfeef46214e449e22f8f271b6cc1f50e744367511ec",
+    "src\\mandol\\auto_builder\\hierarchical_builder.py": "45d1f294a915ad930520e3285cb99daf7533f00432e6c58ca579f8536855bb43"
+  },
+  "test_script_sha256": "e59e1a874c7934b30cce3de434abeb8be19ceaa47f62389fa120d45cf9c90d7c",
+  "runs": [
+    {
+      "mode": "resident",
+      "graph_insert_edges_spaces": true,
+      "dense_faiss": true,
+      "bm25": true,
+      "delete_no_stale_control": true,
+      "fresh_process_roundtrip": true,
+      "eviction": null,
+      "merge_plans": [
+        {
+          "members": [
+            "a",
+            "b"
+          ],
+          "representative": "b",
+          "source_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "reason": "代表文本覆盖组内全部字面事实，且主体和摘要类型一致"
+        }
+      ],
+      "artifact_dir": "E:\\OOPhomework\\tmp\\mandol-graph-zwf850mt\\resident"
+    },
+    {
+      "mode": "rocksdb",
+      "graph_insert_edges_spaces": true,
+      "dense_faiss": true,
+      "bm25": true,
+      "delete_no_stale_control": true,
+      "fresh_process_roundtrip": true,
+      "eviction": {
+        "cold_uids": [
+          "budget",
+          "raw_a",
+          "raw_b"
+        ],
+        "removed_count": 3,
+        "retrieval_state_unchanged": true
+      },
+      "merge_plans": [
+        {
+          "members": [
+            "a",
+            "b"
+          ],
+          "representative": "b",
+          "source_uids": [
+            "raw_a",
+            "raw_b"
+          ],
+          "reason": "代表文本覆盖组内全部字面事实，且主体和摘要类型一致"
+        }
+      ],
+      "artifact_dir": "E:\\OOPhomework\\tmp\\mandol-graph-zwf850mt\\rocksdb"
+    }
+  ],
+  "versions": {
+    "numpy": "1.26.4",
+    "torch": "2.8.0",
+    "faiss-cpu": "1.15.1",
+    "rustworkx": "0.18.1",
+    "rocksdict": "0.3.29",
+    "sentence-transformers": "5.7.0"
+  },
+  "passed": true
+}
